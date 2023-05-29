@@ -27,24 +27,6 @@ public class Presenter {
 
   private Readable readableService;
 
-  {
-    var invoice = Invoice.Builder.createBuilder().withProduct("масло")
-        .withAmount(new BigDecimal("54.23")).withRate(new BigDecimal("78.92")).withCurrency("RUB")
-        .withDate(LocalDate.parse("01.01.1991", DateTimeFormatter.ofPattern(DATE_PATTERN)))
-        .withUsername("Иванова").withSum(new BigDecimal("101.00")).withNumber("К52").build();
-
-    var payment = Payment.Builder.createBuilder().withEmployee("Петров")
-        .withDate(LocalDate.parse("01.01.1991", DateTimeFormatter.ofPattern(DATE_PATTERN)))
-        .withUsername("Иванова").withSum(new BigDecimal("101.00")).withNumber("К52").build();
-
-    var peymentApp = PaymentApplication.Builder.createBuilder().withContractor("Галадзе")
-        .withFee(new BigDecimal("12.13")).withRate(new BigDecimal("78.92")).withCurrency("RUB")
-        .withDate(LocalDate.parse("01.01.1991", DateTimeFormatter.ofPattern(DATE_PATTERN)))
-        .withUsername("Иванова").withSum(new BigDecimal("101.00")).withNumber("К52").build();
-
-    data.addAll(Arrays.asList(invoice, payment, peymentApp));
-  }
-
   public Presenter(Writable writableService, Readable readableService) {
     this.writableService = writableService;
     this.readableService = readableService;
