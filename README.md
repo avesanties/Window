@@ -22,5 +22,5 @@ cd ./Window
 ```
 2. Running app
 ```
-./.mvnw
+./mvnw spring-boot:run
 ```
